@@ -1,0 +1,192 @@
+/* Reset y básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #b0b5c9, #f56b2a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background: #fff;
+    transition: all 0.5s ease;
+}
+
+/* PANEL FORMULARIO */
+.form-panel {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.form {
+    width: 100%;
+    max-width: 300px;
+    flex-direction: column;
+    display: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form input:focus {
+    border-color: #667eea;
+}
+
+.form button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form button:hover {
+    background: #9e80bb;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.switch-form button {
+    border: none;
+    background: none;
+    color: #667eea;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.switch-form button:hover {
+    color: #764ba2;
+}
+
+/* PANEL INFORMATIVO */
+.info-panel {
+    flex: 1;
+    background: #764ba2;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.info-panel h2 {
+    margin-bottom: 20px;
+}
+
+.info-panel p {
+    font-size: 16px;
+}
+
+/* ESTADO REGISTRO: desplazar paneles */
+.container.register-active .form-panel {
+    transform: translateX(100%);
+}
+
+.container.register-active .info-panel {
+    transform: translateX(-100%);
+}
+
+/* ---------------------- */
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    .container {
+        flex-direction: column; /* apilar verticalmente */
+        width: 90%;
+        height: auto;
+    }
+
+    .form-panel,
+    .info-panel {
+        flex: unset;
+        width: 100%;
+        transform: translateX(0); /* evitar lateral */
+    }
+
+    /* Animación vertical para móviles */
+    .container.register-active .form-panel {
+        transform: translateY(20px); /* desplazamiento suave hacia abajo */
+    }
+
+    .container.register-active .info-panel {
+        transform: translateY(-20px); /* desplazamiento hacia arriba */
+    }
+
+    .info-panel {
+        order: 2;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .form-panel {
+        order: 1;
+    }
+
+    .form input,
+    .form button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .form h2,
+    .info-panel h2 {
+        font-size: 20px;
+    }
+
+    .form input,
+    .form button {
+        font-size: 14px;
+    }
+
+    .info-panel p {
+        font-size: 14px;
+    }
+}
+

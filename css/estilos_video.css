@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #00111a 0%, #002b36 100%);
+    color: white;
+    padding: 15px 20px;
+    flex-wrap: wrap; /* 🔹 Permite que los elementos bajen de línea */
+    gap: 10px;       /* 🔹 Espacio entre título y botón */
+    text-align: center;
+}
+
+header h1 {
+    color: #00e5ff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    flex: 1; /* 🔹 Permite que el título use el espacio disponible */
+    text-align: left;
+    min-width: 250px;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* 🔹 Evita que el texto se parta en dos líneas */
+}
+
+.logout-btn:hover {
+    background: #ff0033;
+    color: #fff;
+    border-color: #ff0033;
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.4);
+}
+
+/* ===== NAV ===== */
+nav {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    flex-wrap: wrap; /* 🔹 Si el espacio es pequeño, se adaptan en filas */
+}
+
+nav a {
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #90e0ef;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 1.4rem;
+    color: #b2d4dd;
+    margin-bottom: 20px;
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.3);
+    display: inline-block;
+    width: 100%;
+    max-width: 750px;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.descripcion {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* ===== QUIZ ===== */
+.quiz {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.quiz h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00c8ff;
+}
+
+.pregunta {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0099ff;
+}
+
+/* ===== RESULTADO ===== */
+.resultado {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.felicitaciones {
+    background-color: #00c851;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer {
+    from {opacity: 0; transform: scale(0.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    header {
+        flex-direction: column; /* 🔹 Título arriba, botón abajo */
+        align-items: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .logout-btn {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .intro h2 {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .logout-btn {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+}
+

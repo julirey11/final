@@ -1,0 +1,189 @@
+/* ======== ESTILO GENERAL ======== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #0a0a0a, #050505);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======== HEADER ======== */
+header {
+    background: linear-gradient(135deg, #00111a 0%, #002b36 100%);
+    padding: 25px 15px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.25);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+header h1 {
+    color: #00e5ff;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ff0033;
+    color: #fff;
+    border-color: #ff0033;
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.4);
+}
+
+/* ======== MENÚ ======== */
+nav {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.menu a {
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #90e0ef;
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+/* ======== CONTENIDO ======== */
+.contenido {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.formulario h2 {
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+.formulario p {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 15px;
+}
+
+input[type="url"] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #00e5ff;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+input[type="url"]:focus {
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+button {
+    padding: 10px 25px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    background: #00e5ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00b4d8;
+    transform: scale(1.05);
+}
+
+/* ======== RESULTADOS ======== */
+.resultados {
+    margin-top: 50px;
+    text-align: left;
+    max-width: 800px;
+    margin-inline: auto;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,229,255,0.15);
+    backdrop-filter: blur(8px);
+}
+
+.url-evaluada {
+    color: #90e0ef;
+    margin-bottom: 20px;
+}
+
+.item-resultado {
+    margin-bottom: 20px;
+}
+
+.item-resultado h4 {
+    color: #00e5ff;
+    margin-bottom: 8px;
+}
+
+.barra {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.progreso {
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #00ffc3);
+    transition: width 1s ease;
+    border-radius: 10px;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #001219;
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    input[type="url"] {
+        width: 80%;
+    }
+    .resultados {
+        padding: 20px;
+    }
+}
