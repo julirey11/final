@@ -81,20 +81,22 @@ main h2 {
 }
 
 /* ======== BOTÓN DE INGRESO ======== */
-button {
+.ingresar-btn {
     background: #00e5ff;
     border: none;
     color: #00111a;
     font-weight: bold;
     padding: 12px 28px;
     border-radius: 8px;
-    margin-top: 15px;
+    margin-top: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
 }
 
-button:hover {
+.ingresar-btn:hover {
     background: #ff6600;
     color: white;
     transform: scale(1.05);
@@ -121,7 +123,7 @@ body {
         font-size: 1.7em;
     }
 
-    button {
+    .ingresar-btn {
         width: 80%;
         font-size: 1rem;
     }
@@ -136,7 +138,7 @@ body {
         font-size: 1.4em;
     }
 
-    button {
+    .ingresar-btn {
         width: 90%;
         font-size: 0.95rem;
     }
@@ -152,10 +154,11 @@ body {
 <main>
     <h2>Bienvenido al portal educativo</h2>
     <p>Descubre los principios de la calidad en el desarrollo de software y mejora tus conocimientos con nosotros.</p>
-    <form action="login.php">
-        <button type="submit">Ingresar</button>
-    </form>
+    <a href="login.php" class="ingresar-btn">Ingresar</a>
 </main>
 
 </body>
 </html>
+
+
+
